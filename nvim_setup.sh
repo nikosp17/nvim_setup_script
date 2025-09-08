@@ -46,7 +46,7 @@ cd ~/.config/nvim/scripts/
 pipx install .
 
 # Fix Mason permission.
-chown -R $(whoami):$(whoami) ~/.local/share/nvim
+sudo chown -R $(whoami):$(whoami) ~/.local/share/nvim
 
 # Remove broken Mason packages (if any).
 rm -rf ~/.local/share/nvim/mason/staging/pyright
