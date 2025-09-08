@@ -2,7 +2,7 @@
 
 # A bash script to quickly setup nvim in Debian-based distros. You need sudo to run the script.
 
-apt update && apt install -y \
+sudo apt update && sudo apt install -y \
     build-essential \
     clang-format \
     curl \
@@ -18,7 +18,7 @@ apt update && apt install -y \
     ripgrep \
     unzip
 
-npm install -g pyright typescript typescript-language-server
+sudo npm install -g pyright typescript typescript-language-server
 
 nvim --version
 
@@ -33,7 +33,7 @@ git clone git@github.com:nikosp17/Galahad_nvim_setup.git ~/.config/nvim # Replac
 ## Go installation
 curl -LO https://go.dev/dl/go1.25.1.linux-amd64.tar.gz ~/Downloads
 cd ~/Downloads
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.25.1.linux-amd64.tar.gz # Remember to update the version number in the command above when a new version is released.
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.1.linux-amd64.tar.gz # Remember to update the version number in the command above when a new version is released.
 export PATH=$PATH:/usr/local/go/bin
 
 go version
