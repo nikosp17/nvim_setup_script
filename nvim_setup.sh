@@ -30,15 +30,17 @@ pipx --version
 
 rm -rf ~/.config/nvim # This will remove any existing nvim config and the following line will create a new one.
 
-git clone https://github.com/xxxxx ~/.config/nvim # Replace xxxxx with your nvim config repo. 
+git clone git@github.com:nikosp17/Galahad_nvim_setup.git ~/.config/nvim # Replace xxxxx with your nvim config repo. 
 
 ## Go installation
 curl -LO https://go.dev/dl/go1.25.1.linux-amd64.tar.gz ~/Downloads
 cd ~/Downloads
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.25.1.linux-amd64.tar.gz # Remember to update the version number in the command above when a new version is released.
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.1.linux-amd64.tar.gz # Remember to update the version number in the command above when a new version is released.
 export PATH=$PATH:/usr/local/go/bin
 
 go version
+
+sudo rm -rf ~/Downloads/go1.25.1.linux-amd64.tar.gz # Remove the go package and clean the system
 
 # Setup local python scripts
 cd ~/.config/nvim/scripts
