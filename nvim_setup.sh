@@ -45,15 +45,6 @@ sudo rm -rf ~/Downloads/go1.25.1.linux-amd64.tar.gz # Remove the go package and 
 cd ~/.config/nvim/scripts/
 pipx install .
 
-# Fix Mason permission.
-sudo chown -R $(whoami):$(whoami) ~/.local/share/nvim
-
-# Remove broken Mason packages (if any).
-rm -rf ~/.local/share/nvim/mason/staging/pyright
-rm -rf ~/.local/share/nvim/mason/staging/typescript-language-server
-rm -rf ~/.local/share/nvim/mason/packages/pyright
-rm -rf ~/.local/share/nvim/mason/packages/typescript-language-server
-
 exec $SHELL
 
 # Install markdown support and preview for nvim.
