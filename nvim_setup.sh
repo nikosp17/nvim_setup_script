@@ -2,13 +2,13 @@
 
 # A bash script to quickly setup nvim in Debian-based distros. You need sudo to run the script.
 
+# Install basic dependencies through apt and npm.
 sudo apt update && sudo apt install -y \
     build-essential \
     clang-format \
     curl \
     fd-find \
     git \
-    neovim \
     nodejs \
     npm \
     pipx \
@@ -19,6 +19,21 @@ sudo apt update && sudo apt install -y \
     unzip
 
 sudo npm install -g pyright typescript typescript-language-server
+
+# Install nvim through AppImage to get the latest version
+
+sudo mkdir -p /opt/nvim
+sudo curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage /opt/nvim/
+echo "What shell are you using? Select of the following: 1) zsh, 2) bash"
+read user_input
+
+if [$user_input -eq 1]; then
+    sed -i '$a\export PATH="$PATH:/opt/nvim/"' ~/.zshrc
+elif [$user_input -eq 2]; then
+    sed -i '$a\export PATH="$PATH:/opt/nvim/"' ~/.bashrc
+else
+    exit 1
+fi 
 
 nvim --version
 
