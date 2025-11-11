@@ -9,14 +9,21 @@ sudo apt update && sudo apt install -y \
     curl \
     fd-find \
     git \
-    nodejs \
-    npm \
     pipx \
     python3 \
     python3-neovim \
     python3-pip \
     ripgrep \
     unzip
+
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js:
+nvm install 25
 
 sudo npm install -g pyright typescript typescript-language-server
 
