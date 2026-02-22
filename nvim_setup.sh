@@ -28,7 +28,7 @@ nvm install xxx # Choose your version of nodejs here
 # Install nvim through AppImage to get the latest version
 
 sudo mkdir -p /opt/nvim
-sudo curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage /opt/nvim/
+sudo curl -Lo /opt/nvim/nvim https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 echo "What shell are you using? Select of the following: 1) zsh, 2) bash"
 read user_input
 
