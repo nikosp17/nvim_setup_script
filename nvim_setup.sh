@@ -23,9 +23,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 \. "$HOME/.nvm/nvm.sh"
 
 # Download and install Node.js:
-nvm install 25
-
-sudo npm install -g pyright typescript typescript-language-server
+nvm install xxx # Choose your version of nodejs here
 
 # Install nvim through AppImage to get the latest version
 
