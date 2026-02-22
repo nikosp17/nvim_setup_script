@@ -23,6 +23,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 \. "$HOME/.nvm/nvm.sh"
 
 # Download and install Node.js:
+echo "Did you remember to add the latest version in the config file"
 nvm install xxx # Choose your version of nodejs here
 
 # Install nvim through AppImage to get the latest version
